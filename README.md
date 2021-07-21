@@ -12,7 +12,7 @@ pip install -r requirements.txt
 ## Make Data Manifest for Train/Test Split (Re-labelled from Radiologist)
 Step 2. The dataloader from this system requires a JSON manifest to process. To create the data files, you can run the following command in your command line.
 
-i.e. python data/make_data.py <root directory to NIH image>
+i.e. python data/make_data.py <root directory to NIH image> \
 Example: 
 ```
 python data/make_data.py /data/volume03/NIH-chest/NIH
