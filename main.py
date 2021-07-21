@@ -4,6 +4,7 @@ import os
 from time import time
 import random
 import numpy as np
+import pandas as pd
 import argparse
 import dataloader
 import models
@@ -14,6 +15,11 @@ from keras.losses import binary_crossentropy
 import tensorflow as tf
 import keras
 from keras import backend as K
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "1,2,3"
+config = tf.ConfigProto(log_device_placement=True, allow_soft_placement=True)
+config.gpu_options.allow_growth = True
+sess=tf.Session(config = config)
 
 # callbacks params and configs
 from keras.callbacks import (ReduceLROnPlateau, LearningRateScheduler,
