@@ -11,9 +11,11 @@ pip install -r requirements.txt
 
 ## Make Data Manifest for Train/Test Split (Re-labelled from Radiologist)
 Step 2. The dataloader from this system requires a JSON manifest to process. To create the data files, you can run the following command in your command line.
+
+i.e. python data/make_data.py <root directory to NIH image>
+Example: 
 ```
-python data/make_data.py <root directory to NIH image>
-e.g. python data/make_data.py /data/volume03/NIH-chest/NIH
+python data/make_data.py /data/volume03/NIH-chest/NIH
 ```
 
 ## Training
@@ -24,8 +26,7 @@ Suggested training learning rates are as follows,
 - DenseNet: 1e-5
 - ResNet: 1e-7
 
+Example:
 ```
-e.g.
 python main.py -model efficientnet -save_dir save_models/efficientnet 
-
 ```
