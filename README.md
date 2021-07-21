@@ -17,8 +17,8 @@ e.g. python data/make_data.py /data/volume03/NIH-chest/NIH
 ```
 
 ## Training
-Step 3. To train the model, use main.py with specific model selections. \n
-Suggested training learning rates are
+Step 3. To train the model, use main.py with specific model selections. \
+Suggested training learning rates are as follows,
 - EfficientNet: 1e-5
 - DenseNet: 1e-5
 - ResNet: 1e-7
