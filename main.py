@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import os
+import cv2
 from time import time
 import random
 import numpy as np
@@ -198,7 +199,7 @@ if __name__ == "__main__":
     for i, meta in enumerate(tqdm(test_set)):
         img_raw = cv2.resize(cv2.imread(eval(meta)['image_filepath']), (768,768))
         trans = image_processor(image=img_raw)
-        img = trans_img['image']
+        img = trans['image']
         pred = model.predict(np.expand_dims(img, axis=0))
         test_pred.append(pred.tolist()[0])
         target.append(int(eval(meta)['label'] == 'positive'))
