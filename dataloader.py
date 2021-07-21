@@ -157,7 +157,7 @@ class NIHDataGenerator(keras.utils.Sequence):
         X = np.empty((self.batch_size, self.image_size, self.image_size, 3))
         for i, impath in enumerate(image_paths):
             
-            im = cv2.imread(eval(im_path)['image_filepath'])
+            im = cv2.imread(eval(impath)['image_filepath'])
             
             ## resize sample
             X[i,] = cv2.resize(im, (self.image_size, self.image_size))
