@@ -18,6 +18,7 @@ e.g. python data/make_data.py /data/volume03/NIH-chest/NIH
 
 ## Training
 Step 3. To train the model, use main.py with specific model selections. \
+Create a directory in this project name `save_models` with sub folder called `efficientnet` and etc. to store training progress and results.
 Suggested training learning rates are as follows,
 - EfficientNet: 1e-5
 - DenseNet: 1e-5
